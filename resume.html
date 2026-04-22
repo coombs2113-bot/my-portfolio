@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume- Carter Coombs</title>
+    <style>
+/* Cool Toned Palette */
+:root {
+    --bg: #e6f3ff;
+    --text: #1e3a5f;
+    --accent: #b3d9ff;
+    --border: #a0c4ff;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background-color: #ffffff;
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CC</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="sudoku.html">Game</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="container">
+        <h2>Professional Profile</h2>
+        <p>Focused on competitive landscapes and corporate strategy, with a background in high-volume door-to-door sales. Fluent in Portuguese with a deep understanding of international markets from two years in Brazil.</p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Technical</h3>
+                <ul>
+                    <li>SQL & Database Management</li>
+                    <li>VBA Excel Automation</li>
+                    <li>Tableau Visualization</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Sales & Ops</h3>
+                <ul>
+                    <li>SalesRabbit Expert</li>
+                    <li>Retention Strategy</li>
+                    <li>Team Coordination</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div style="background: white; padding: 3rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 10px rgba(0,0,0,0.05); color: #1e3a5f;">
+            
+            <header style="text-align: center; border-bottom: 2px solid #1e3a5f; padding-bottom: 1.5rem; margin-bottom: 2rem;">
+                <h1 style="font-size: 2rem; text-transform: uppercase; letter-spacing: 1px;">Carter Douglas Wayne Coombs</h1>
+                <p style="font-size: 0.9rem; color: #5a7a99; margin-top: 0.5rem;">Provo, UT | coombs2113@gmail.com | (385) 240-8478</p>
+            </header>
+
+            <div class="resume-body" style="text-align: left;">
+                <h3 style="text-transform: uppercase; border-bottom: 1px solid var(--accent); margin-bottom: 1rem; font-size: 1.2rem;">Education</h3>
+                <div style="display: flex; justify-content: space-between; font-weight: bold;"><span>Brigham Young University</span><span>Expected 2029</span></div>
+                <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 0.5rem;">B.S. Strategic Management</p>
+                
+                <div style="display: flex; justify-content: space-between; font-weight: bold; margin-top: 1rem;"><span>Weber State University</span><span>GPA: 3.92</span></div>
+                <p style="font-style: italic; font-size: 0.95rem;">Associate of Science (Completed in 1 Semester)</p>
+
+                <h3 style="text-transform: uppercase; border-bottom: 1px solid var(--accent); margin: 2rem 0 1rem; font-size: 1.2rem;">Professional Experience</h3>
+                <div style="display: flex; justify-content: space-between; font-weight: bold;"><span>Coombs Holdings LLC</span><span>Jan 2026 – Present</span></div>
+                <p style="font-style: italic; font-size: 0.95rem;">Founder & Principal</p>
+                <ul style="padding-left: 1.2rem; font-size: 0.9rem; margin-top: 0.3rem;">
+                    <li>Managing strategic investments and residential peer group logistics for 10+ individuals.</li>
+                </ul>
+
+                <div style="display: flex; justify-content: space-between; font-weight: bold; margin-top: 1rem;"><span>Toro Sales / State Energy Inc.</span><span>Sept 2025 – Present</span></div>
+                <p style="font-style: italic; font-size: 0.95rem;">Sales Operations & Fiber Consultant</p>
+                <ul style="padding-left: 1.2rem; font-size: 0.9rem; margin-top: 0.3rem;">
+                    <li>Optimizing lead generation via SalesRabbit and analyzing sale-to-install lifecycles.</li>
+                </ul>
+
+                <h3 style="text-transform: uppercase; border-bottom: 1px solid var(--accent); margin: 2rem 0 1rem; font-size: 1.2rem;">Core Skills</h3>
+                <p style="font-size: 0.95rem;"><strong>Languages:</strong> Portuguese (Fluent), Spanish (Proficient)</p>
+                <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>Technical:</strong> SQL, VBA Automation, Tableau, Custom iOS App Development</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

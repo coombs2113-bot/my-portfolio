@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game - Carter Coombs</title>
+    <style>
+/* Cool Toned Palette */
+:root {
+    --bg: #e6f3ff;
+    --text: #1e3a5f;
+    --accent: #b3d9ff;
+    --border: #a0c4ff;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+/* Navigation Styling */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 2rem 10%; 
+    background-color: white; /* Optional: keeps it distinct from the light blue bg */
+    border-bottom: 1px solid var(--border); 
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
+
+nav ul li { 
+    margin-left: 2rem; 
+}
+
+nav a { 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 500; 
+    font-size: 0.9rem;
+}
+#sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    border: 2px solid var(--text);
+}
+
+#grid input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid var(--border);
+    outline: none;
+    color: var(--text);
+    background: transparent;
+}
+
+#grid input[readonly] {
+    background: var(--accent);
+    font-weight: bold;
+}
+
+/* 3x3 Grid Borders */
+#grid input:nth-child(3n) { border-right: 2px solid var(--text); }
+#grid input:nth-child(9n) { border-right: 1px solid var(--border); } /* Reset right edge */
+#grid input:nth-child(n+19):nth-child(-n+27),
+#grid input:nth-child(n+46):nth-child(-n+54) { border-bottom: 2px solid var(--text); }
+
+.game-controls {
+    margin-top: 1.5rem;
+}
+
+.game-controls button {
+    padding: 0.5rem 1rem;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CC</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="sudoku.html">Game</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="game" class="container">
+        <h2>Sudoku</h2>
+        <p>A little logic for your downtime. Fill the grid using 1-9.</p>
+        
+        <div id="sudoku-container">
+            <div id="grid">
+                </div>
+            <div class="game-controls">
+                <button onclick="clearGrid()">Clear Board</button>
+                <button onclick="checkResult()">Check Solution</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+const grid = document.getElementById('grid');
+
+// Pre-defined puzzle (0 means empty)
+const puzzle = [
+    [5,3,0,0,7,0,0,0,0],
+    [6,0,0,1,9,5,0,0,0],
+    [0,9,8,0,0,0,0,6,0],
+    [8,0,0,0,6,0,0,0,3],
+    [4,0,0,8,0,3,0,0,1],
+    [7,0,0,0,2,0,0,0,6],
+    [0,6,0,0,0,0,2,8,0],
+    [0,0,0,4,1,9,0,0,5],
+    [0,0,0,0,8,0,0,7,9]
+];
+
+// Create the 9x9 board
+function createBoard() {
+    for (let i = 0; i < 81; i++) {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.maxLength = 1;
+        const row = Math.floor(i / 9);
+        const col = i % 9;
+        const value = puzzle[row][col];
+        if (value !== 0) {
+            input.value = value;
+            input.readOnly = true;
+        }
+        // Basic validation: only allow numbers 1-9
+        input.oninput = function() {
+            this.value = this.value.replace(/[^1-9]/g, '');
+        };
+        grid.appendChild(input);
+    }
+}
+
+function clearGrid() {
+    const inputs = document.querySelectorAll('#grid input:not([readonly])');
+    inputs.forEach(input => input.value = '');
+}
+
+function checkResult() {
+    alert("Logic check coming soon! Keep practicing.");
+}
+
+createBoard();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Carter Coombs</title>
+    <style>
+/* Cool Toned Palette */
+:root {
+    --bg: #e6f3ff;
+    --text: #1e3a5f;
+    --accent: #b3d9ff;
+    --border: #a0c4ff;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    border-bottom: 1px solid var(--border);
+}
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--text); /* Uses your dark blue */
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.project-item {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--accent);
+    border: 1px solid var(--border);
+}
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    font-size: 0.8rem;
+    color: #5a7a99;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CC</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="sudoku.html">Game</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h2>Current Projects</h2>
+
+        <div class="project-item">
+            <h3>Custom Sales Tracking App</h3>
+            <p>Developing an iOS keyboard integrated solution to improve retention rates for fiber internet installations. This tool bridges the gap between field sales and back-end data entry.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Fiber Operations & Infrastructure</h3>
+            <p>I’m currently operating within a high-performance fiber team, focusing on the logistics of residential internet expansion. My role involves analyzing local market saturation and working to improve the 'sale-to-install' lifecycle. This video explains the technology behind the infrastructure I work with every day.</p>
+            
+            <div class="video-wrapper" style="margin-top: 1.5rem; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/fncKWrmONxk" 
+                    title="How Fiber Optics Work" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container" style="margin-top: 5rem; text-align: center;">
+    <h2>Market Strategy Insights</h2>
+    <p style="margin-bottom: 2rem; max-width: 700px; margin: 0 auto 2rem;">
+        Analyzing global sales performance to identify competitive advantages and regional growth opportunities.
+    </p>
+    
+    <div id="tableau-container" style="width: 100%; max-width: 1000px; margin: 0 auto; min-height: 600px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #fff;">
+        <div class='tableauPlaceholder' id='viz1713823000000' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt='Global Sales Dashboard' src='https://public.tableau.com/static/images/Sa/SalesPerformance_16885686524310/GlobalSales/1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='SalesPerformance_16885686524310/GlobalSales' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Sa/SalesPerformance_16885686524310/GlobalSales/1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1713823000000');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+    </div>
+</section>
+<a href="#top" id="backToTop" title="Go to top">↑</a>
+    <footer>
+        <p>&copy; 2026 Carter Coombs</p>
+    </footer>
+
+</body>
+</html>

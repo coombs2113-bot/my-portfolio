@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel | Carter Coombs</title>
+    <style>
+        :root {
+            --bg: #f0f9ff;
+            --text: #075985;
+            --accent-yellow: #fef08a;
+            --accent-green: #bbf7d0;
+            --accent-blue: #bae6fd;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); }
+        
+        nav { display: flex; justify-content: space-between; padding: 2rem 10%; background: white; border-bottom: 2px solid var(--accent-blue); }
+        .logo { font-weight: bold; font-size: 1.5rem; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 2rem; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 4rem auto; padding: 0 2rem; }
+        .header-section { text-align: center; margin-bottom: 4rem; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; color: #0369a1; }
+
+        .travel-grid { display: grid; gap: 4rem; }
+        .destination-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 2px solid transparent; transition: transform 0.3s ease; }
+        .destination-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .content { padding: 2rem; }
+        .tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; }
+        
+        .tag-brazil { background: #dcfce7; color: #166534; }
+        .tag-costarica { background: #fef9c3; color: #854d0e; }
+        .tag-ny { background: #fee2e2; color: #991b1b; }
+
+        h2 { margin-bottom: 1rem; }
+        footer { text-align: center; padding: 4rem; font-size: 0.9rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <nav id="top">
+    <div class="logo">CC</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="sudoku.html">Game</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Global Perspective</h1>
+            <p>Exploring the world, from the rainforests of Central America to the streets of Manhattan.</p>
+        </div>
+
+        <div class="travel-grid">
+            
+            <div class="destination-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/_0ZkeFtkWNA" title="Brazil Travel Video" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <span class="tag tag-brazil">2 Years in Country</span>
+                    <h2>Brazil</h2>
+                    <p>My home for two years. Brazil taught me Portuguese, the value of deep human connection, and how to thrive in completely new environments. It's the place that shaped my cross-cultural leadership skills.</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/l7G3aAdfcLA" title="Costa Rica Travel Video" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <span class="tag tag-costarica">Nature & Pura Vida</span>
+                    <h2>Costa Rica</h2>
+                    <p>Incredible landscapes and a focus on "Pura Vida." Visiting Costa Rica was a reminder of the power of a positive mindset and the beauty of the natural world.</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9p3dtE98xRY" title="New York City Travel Video" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <span class="tag tag-ny">The City That Never Sleeps</span>
+                    <h2>New York</h2>
+                    <p>The ultimate hub of strategy and commerce. New York City represents the fast-paced energy I strive to bring to my professional operations.</p>
+                </div>
+            </div>
+
+        </div>
+
+<section id="goals" class="container" style="margin-top: 5rem; background: white; padding: 2rem; border-radius: 12px; border: 1px solid var(--accent-blue);">
+    <h2>Travel Objectives</h2>
+    <p>My strategy for exploring new regions follows a specific hierarchy:</p>
+    
+    <ol style="margin-top: 1.5rem; padding-left: 2rem;">
+        <li><strong>Cultural Immersion</strong>
+            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; list-style-type: circle;">
+                <li>Language practice (Portuguese/Spanish)</li>
+                <li>Local culinary experiences</li>
+            </ul>
+        </li>
+        <li><strong>Logistical Planning</strong>
+            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; list-style-type: circle;">
+                <li>Optimizing travel routes</li>
+                <li>Budget-oriented accommodation</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div style="margin-top: 2rem; text-align: center;">
+        <a href="#top" style="color: var(--text); font-weight: bold; text-decoration: none;">↑ Back to Top of Page</a>
+    </div>
+</section>
+
+        <footer>
+            <p>&copy; 2026 Carter Coombs | Adventure & Strategy</p>
+        </footer>
+    </div>
+
+</body>
+</html>
